@@ -12,8 +12,6 @@ BZ platforms are automated platform that couple Belousov-Zhabotinsky reaction, h
 The periodicity of the oscillation of the BZ reaction is controlled via mechanical stimuli from the magnetics stirrers. On top of that, the coupling between two or more neighbouring cells are governed by the hydrodynamics through the interfacial stirrers.<br/>
 The dimension of each cell was desgined in such a way that no apparent coupling between cells can be observed without activation of the interfacial stirrers.
 
-![alt text](https://github.com/croningp/BZComputation/blob/master/media/out.gif){:height="50%" width="50%"}
-
 ## DC motors operation
 The DC motors are separated into two categories, namely: <br/>
 (i) [Cell-motors](https://uk.rs-online.com/web/p/dc-geared-motors/8347675?cm_mmc=UK-PLA-DS3A-_-google-_-PLA_UK_EN_Automation+%26+Control+Gear_Whoop-_-DC+Geared+Motors_Whoop-_-PRODUCT_GROUP&matchtype=&pla-341179612256&s_kwcid=AL!7457!3!413164772306!!!g!341179612256!&gclid=CjwKCAiAnfjyBRBxEiwA-EECLLOxfyEWQI48JPJwKeyX3iATBWEGEihnJxriuzLXfxe1rH9PmNmegRoCBV8QAvD_BwE&gclsrc=aw.ds) <br/>
