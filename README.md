@@ -9,10 +9,10 @@ BZ platforms are automated platform that couple Belousov-Zhabotinsky reaction, h
 
 
 ## Platform Overview
-BZ platforms are separated into one dimensional (1D) and 2 dimnesional (2D). During experiment, reagents for the Belousov-Zhabotinsky (BZ) reaction are pre-mixed in mixing chamber followed by filling the platform with the mixed solution. <br/>
 The periodicity of the oscillation of the BZ reaction is controlled via mechanical stimuli from the magnetics stirrers. On top of that, the coupling between two or more neighbouring cells are governed by the hydrodynamics through the interfacial stirrers.<br/>
 The dimension of each cell was desgined in such a way that no apparent coupling between cells can be observed without activation of the interfacial stirrers.
 
+![alt text](https://github.com/croningp/BZComputation/blob/master/media/out.gif)
 
 ## DC motors operation
 The DC motors are separated into two categories, namely: <br/>
