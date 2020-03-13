@@ -1,0 +1,92 @@
+{
+    "io": {
+        "port": "/dev/ttyUSB0",
+        "timeout": 1
+    },
+    "default": {
+      "volume": 5,
+      "micro_step_mode": 2,
+      "top_velocity": 24000,
+      "initialize_valve_position": "I"
+    },
+    "groups": {
+      "chemicals": ["ferroin", "water", "malonic", "sulfuric", "bromate", "bzmix", "waste"]
+    },
+    "pumps": {
+          "ferroin": {
+          "switch": "0",
+      "volume": 5,
+      "top_velocity": 6000
+        },
+        
+        "water": {
+          "switch": "1",
+          "volume": 12.5,
+          "top_velocity": 6000
+        },
+        "malonic": {
+          "switch": "2",
+          "volume": 12.5,
+          "top_velocity": 6000
+        },
+        "sulfuric": {
+            "switch": "3",
+        "volume": 12.5,
+            "top_velocity": 6000
+        },
+        "bromate": {
+          "switch": "4",
+      "volume": 12.5,
+          "top_velocity": 6000
+        },
+        "bzmix": {
+            "switch": "5",
+        "volume": 12.5,
+            "top_velocity": 6000
+        },
+          "waste1": {
+            "switch": "6",
+            "volume": 12.5,
+            "top_velocity": 6000
+        },
+          "waste2": {
+            "switch": "7",
+            "volume": 12.5,
+            "top_velocity": 6000
+        },
+      "waste2d1": {
+          "switch": "8",
+          "volume": 12.5,
+          "top_velocity": 6000
+        },
+            "waste2d2": {
+          "switch": "9",
+          "volume": 12.5,
+          "top_velocity": 6000
+        },
+          "water2d1": {
+            "switch": "A",
+            "volume": 12.5,
+            "top_velocity": 6000
+        },
+          "water2d2": {
+            "switch": "B",
+            "volume": 12.5,
+            "top_velocity": 6000
+        },
+          "bzmix2d1": {
+            "switch": "C",
+            "volume": 12.5,
+            "top_velocity": 6000
+        },
+           "bzmix2d2": {
+            "switch": "D",
+            "volume": 12.5,
+            "top_velocity": 6000
+        }
+  
+  }
+  
+  }
+  
+  
