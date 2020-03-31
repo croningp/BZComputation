@@ -1,26 +1,24 @@
-'''
-This is a minimal implementation of the bz_board python interface.
-For some reason the full fledge implementation done by Kevin
-was giving some problems we couldn't solve, so we are
-doing this minimal implementation instead.
+# ---------------------------------------------------------------------------- #
+# --------------- ONE DIMENSIONAL BZ PLATFORM 1 X 7 CONTROLLER --------------- #
+# ---------------------------------------------------------------------------- #
 
-If you want better functionality, error handling,... check the other one
 
-'''
-# This is an edited script for the BZ2_CA
-# It's a 1x7 with 6 interface
-# Marcus Tze-Kiat Ng <--(he's responsible for it,  in case anything fucks up)
+"""
+	Controls BZ Board using Serial Interface. Each motor can be addressed individually.
+    Cell Stirrers: AC
+    Interfacial Stirrers: IF
+	The 1 x 7 Platform with interface hsa the following nomenclature:
+
+	+ --------------------------------------------------------------+
+	|AC1-(IF1)-AC2-(IF2)-AC3-(IF3)-AC4-(IF4)-AC5-(IF5)-AC6-(IF6)-AC7|
+	+---------------------------------------------------------------+
+
+"""
 
 import serial, time, json, random, csv
 from datetime import datetime
 from random import randint, choice
 import json, os
-
-#   The look of BZ2_CA board
-#   :
-#   #  (AC1)-IF1-(AC2)-IF2-(AC3)-IF3-(AC4)-IF4-(AC5)-IF5-(AC6)-IF6-(AC7)
-# IFs are slow motors 'Aliexpress', while ACs are fast motors 'RS'
-# We typically run IFs at 255 PWM and ACs at 20 PWM
 
 class BZBoard:
 

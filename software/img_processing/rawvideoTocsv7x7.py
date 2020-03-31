@@ -9,7 +9,7 @@
 
 import csv, sys, glob, cv2, multiprocessing
 import numpy as np
-from gridclickdata_2D_CA import GridClickData2D
+from gridclickdata_2D import GridClickData2D
 
 
 def addframe2data(frame, databins, bz_coord, col):

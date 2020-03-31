@@ -10,7 +10,7 @@
 
 
 import cv2
-from generate_dataset_2D_BZ import GridClickData2D
+from generate_dataset_2D import GridClickData2D
 import numpy as np
 import sys
 

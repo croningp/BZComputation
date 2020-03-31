@@ -5,6 +5,9 @@
 
 """
 	Controls BZ Board using Serial Interface. Each motor can be addressed individually.
+	Each cell: C has four interfacial stirrers: I in all four sides except for the ones at 
+	the edges and corners.
+	
 
 	Cell Stirrers in 7x7 array are given by : 
 
