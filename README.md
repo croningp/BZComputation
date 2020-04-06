@@ -19,11 +19,66 @@ The dimension of each cell was desgined in such a way that no apparent coupling 
 
 Details regarding the hardware and the STLs of the 3D printed parts used for the experiments are provided in [hardware](https://github.com/croningp/BZComputation/tree/master/hardware/stls).
 
+## Code example
+```python
+# Library imports
+import cv2
+import sys
+import time
+import queue
+import random
+import numpy as np
+
+from tricont_ctonrols import TricontControl
+from bz_control import BZBoard
+import predict_cnn_2D
+
+resq = multiprocessing.Queue()
+stopt = multiprocessing.Queue()
+
+cnn = predict_cnn_2D.CNN(kwargs={
+	'streampath': "invideo", 'outvideo': "output",
+	'resq': resq, 'stopsig': stopt
+	})
+
+arduino_dict= {         
+		0: "/dev/BZ_satu",
+		1: "/dev/BZ_dua",
+		2: "/dev/BZ_tiga",
+		3: "/dev/BZ_empat"  }
+
+b = BZBoard(port_dict=arduino_dict)    # Arduino device
+p = TricontControl() # calling tricont class
+'''
+ Pretreatment before starting an experiment which includes filling the platform with the BZ solutions and mixing/stabilisation period which allow the solution to be spread evenly throughout the platform.
+ '''
+p.filling_2d()
+b.activate_all(speed=50)
+time.sleep(120)
+b.disable_all()
+time.sleep(160)
+
+# Start of experiment
+cnn.start()
+'''
+Conditions provided which is unique to the experiments depending on what is required.
+In this particular example the experiment will stay put for a minute and terminate the experiment.
+'''
+time.sleep(60)
+
+# End of experiment
+stopt.put(1)
+cnn.join()
+
+p.cleaning_2d()
+```
+
+
 ## __________________________________________________________________________________
 
-Authors Contribution:                           <br/>
-Abhishek Sharma :-                                  <br/>
-Marcus Tze-Kiat Ng :-                               <br/>
-Juan Manuel Parrilla Gutierrez :-                  <br/>
-Yibin Jiang :-                                    <br/>
-Leroy Cronin :-
+Authors: <br/>
+Abhishek Sharma<br/>
+Marcus Tze-Kiat Ng<br/>
+Juan Manuel Parrilla Gutierrez<br/>
+Yibin Jiang <br/>
+Leroy Cronin 
