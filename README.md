@@ -48,9 +48,11 @@ arduino_dict= {
 		3: "/dev/BZ_empat"  }
 
 b = BZBoard(port_dict=arduino_dict)    # Arduino device
-p = TricontControl() # calling tricont class
+p = TricontControl()                   # calling tricont class
 '''
- Pretreatment before starting an experiment which includes filling the platform with the BZ solutions and mixing/stabilisation period which allow the solution to be spread evenly throughout the platform.
+Pretreatment before starting an experiment which includes filling the platform with the BZ
+solutions and mixing/stabilisation period which allow the solution to be spread evenly 
+throughout the platform.
  '''
 p.filling_2d()
 b.activate_all(speed=50)
