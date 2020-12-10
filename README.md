@@ -1,4 +1,4 @@
-This repository consist of the hardware and specification of parts associated to the paper "A programmable chemical state machine solves hard computational problems "
+This repository consist of the hardware and specification of parts associated to the paper "A Scalable Turing Complete Electronically Programmable Chemical Computer."
 
 University of Glasgow, School of Chemistry
 
@@ -13,11 +13,8 @@ The periodicity of the oscillation of the BZ reaction is controlled via mechanic
 The dimension of each cell was desgined in such a way that no apparent coupling between cells can be observed without activation of the interfacial stirrers.
 <p align="center">
   <img width="596" height="282" src="https://github.com/croningp/BZComputation/blob/master/media/bz_platform_description.jpg">
-<!-- </p>
-![](https://github.com/croningp/BZComputation/blob/master/media/bz_platform_description.jpg)
-## Hardware -->
 
-Details regarding the hardware and the STLs of the 3D printed parts used for the experiments are provided in [hardware](https://github.com/croningp/BZComputation/tree/master/hardware/stls).
+Details regarding the hardware and the STLs of the 3D printed parts used for the experiments are provided in [hardware](https://github.com/croningp/BZComputation/blob/master/hardware/hardware.md).
 
 ## Code example
 ```python
@@ -48,7 +45,7 @@ arduino_dict= {
 		3: "/dev/BZ_empat"  }
 
 b = BZBoard(port_dict=arduino_dict)    # Arduino device
-p = TricontControl()                   # calling tricont class
+p = TricontControl()                   # Calling Tricontent pumps class
 '''
 Pretreatment before starting an experiment which includes filling the platform with the BZ
 solutions and mixing/stabilisation period which allow the solution to be spread evenly 
