@@ -1,8 +1,8 @@
-This repository consist of the hardware and specification of parts associated to the paper "A Scalable Turing Complete Electronically Programmable Chemical Computer."
+This repository consist of the hardware and specification of parts associated to the paper "A Hybrid Electronically Programmable Chemical Computer."
 
 University of Glasgow, School of Chemistry
 
-Authors: Abhishek Sharma, Marcus Tze-Kiat Ng, Juan Manuel Parrilla Gutierrez, Yibin Jiang, Leroy Cronin
+Authors: Abhishek Sharma, Marcus Tze-Kiat Ng, Juan Manuel Parrilla Gutierrez, Yibin Jiang, Leroy Cronin*
 
 # BZ Computation
 BZ platforms are automated platform that couple Belousov-Zhabotinsky reaction, hydrodynamic of the system and image recgonition to realise computation in a chemical system.
@@ -53,9 +53,9 @@ throughout the platform.
  '''
 p.filling_2d()
 b.activate_all(speed=50)
-time.sleep(120)
+time.sleep(60)
 b.disable_all()
-time.sleep(160)
+time.sleep(240)
 
 # Start of experiment
 cnn.start()
@@ -68,16 +68,16 @@ time.sleep(60)
 # End of experiment
 stopt.put(1)
 cnn.join()
-
+	A Hybrid Electronically Programmable Chemical Computer
 p.cleaning_2d()
 ```
 
 
-## __________________________________________________________________________________
+## _______________________________________________________________________________
 
 Authors: <br/>
 Abhishek Sharma<br/>
 Marcus Tze-Kiat Ng<br/>
 Juan Manuel Parrilla Gutierrez<br/>
 Yibin Jiang <br/>
-Leroy Cronin 
+Leroy Cronin*
