@@ -1,4 +1,4 @@
-This repository consist of the hardware and specification of parts associated to the paper "A Hybrid Electronically Programmable Chemical Computer."
+This repository consist of the hardware and specification of parts associated to the paper "A Electronically Programmable Chemical Array based Hybrid Information Processor".
 
 University of Glasgow, School of Chemistry
 
@@ -68,7 +68,7 @@ time.sleep(60)
 # End of experiment
 stopt.put(1)
 cnn.join()
-	A Hybrid Electronically Programmable Chemical Computer
+	
 p.cleaning_2d()
 ```
 
