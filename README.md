@@ -72,9 +72,6 @@ cnn.join()
 p.cleaning_2d()
 ```
 
-
-## _______________________________________________________________________________
-
 Authors: <br/>
 Abhishek Sharma<br/>
 Marcus Tze-Kiat Ng<br/>
