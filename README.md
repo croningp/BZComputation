@@ -1,10 +1,12 @@
-This repository consist of the hardware and specification of parts associated to the paper "A Electronically Programmable Chemical Array based Hybrid Information Processor".
+# A Programmable Hybrid Digital Chemical Information Processor based on the Belousov-Zhabotinsky Reaction
 
-University of Glasgow, School of Chemistry
+This repository consist of the hardware and specification of parts associated to the paper "A Programmable Hybrid Digital Chemical Information Processor based on the Belousov-Zhabotinsky Reaction".
 
 Authors: Abhishek Sharma, Marcus Tze-Kiat Ng, Juan Manuel Parrilla Gutierrez, Yibin Jiang, Leroy Cronin*
 
-# BZ Computation
+School of Chemistry, The University of Glasgow, University Avenue, Glasgow G12 8QQ, United Kingdom
+
+## BZ Computation
 BZ platforms are automated platform that couple Belousov-Zhabotinsky reaction, hydrodynamic of the system and image recgonition to realise computation in a chemical system.
 
 
@@ -12,11 +14,11 @@ BZ platforms are automated platform that couple Belousov-Zhabotinsky reaction, h
 The periodicity of the oscillation of the BZ reaction is controlled via mechanical stimuli from the magnetics stirrers. On top of that, the coupling between two or more neighbouring cells are governed by the hydrodynamics through the interfacial stirrers.<br/>
 The dimension of each cell was desgined in such a way that no apparent coupling between cells can be observed without activation of the interfacial stirrers.
 <p align="center">
-  <img width="596" height="282" src="https://github.com/croningp/BZComputation/blob/master/media/bz_platform_description.jpg">
+  <img width="596" height="282" src="https://github.com/croningp/BZComputation/blob/master/media/BZ_Platform.png">
 
 Details regarding the hardware and the STLs of the 3D printed parts used for the experiments are provided in [hardware](https://github.com/croningp/BZComputation/blob/master/hardware/hardware.md).
 
-## Code example
+## Basic Experimental Code example
 ```python
 # Library imports
 import cv2
@@ -38,6 +40,7 @@ cnn = predict_cnn_2D.CNN(kwargs={
 	'resq': resq, 'stopsig': stopt
 	})
 
+# Microcontroller Names (Arduino UNOs)
 arduino_dict= {         
 		0: "/dev/BZ_satu",
 		1: "/dev/BZ_dua",
@@ -45,7 +48,7 @@ arduino_dict= {
 		3: "/dev/BZ_empat"  }
 
 b = BZBoard(port_dict=arduino_dict)    # Arduino device
-p = TricontControl()                   # Calling Tricontent pumps class
+p = TricontControl()                   # Calling Tricontinent pumps 
 '''
 Pretreatment before starting an experiment which includes filling the platform with the BZ
 solutions and mixing/stabilisation period which allow the solution to be spread evenly 
@@ -72,9 +75,3 @@ cnn.join()
 p.cleaning_2d()
 ```
 
-Authors: <br/>
-Abhishek Sharma<br/>
-Marcus Tze-Kiat Ng<br/>
-Juan Manuel Parrilla Gutierrez<br/>
-Yibin Jiang <br/>
-Leroy Cronin*
