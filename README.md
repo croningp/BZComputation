@@ -1,5 +1,7 @@
 # A Programmable Hybrid Digital Chemical Information Processor based on the Belousov-Zhabotinsky Reaction
 
+[![DOI](https://zenodo.org/badge/245472255.svg)](https://zenodo.org/doi/10.5281/zenodo.10605376)
+
 This repository consist of the hardware and specification of parts associated to the paper "A Programmable Hybrid Digital Chemical Information Processor based on the Belousov-Zhabotinsky Reaction".
 
 Authors: Abhishek Sharma, Marcus Tze-Kiat Ng, Juan Manuel Parrilla Gutierrez, Yibin Jiang, Leroy Cronin*
